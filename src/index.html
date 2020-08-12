@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Acumulado</title>
+  <link rel="stylesheet" href="css/site.css" />
+  <title>News App</title>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+<script>
+  //==================
+  //ACTIVE MENU
+  //==================
+  let $menu = document.querySelector(".header");
+  let $hamburger = document.querySelector(".com-hamburger");
+
+  //le agregamos o le quitamos la clase dependiendo si la tiene o no
+  let handleMenu = () => {
+    $menu.classList.toggle("--active-menu");
+  };
+
+  //le asiganmos la func al click del menu
+  $hamburger.addEventListener("click", handleMenu);
+
+  //Hacemos que el menu se cierre cuando clickeamos esc.
+  window.addEventListener("keydown", function (e) {
+    //preg si la tecla es esc cuando tecleamos
+    if (e.key == "Escape" || e.key == "Esc" || e.keyCode == 27) {
+      e.preventDefault();
+      //recorremos todos los active y lo capturamos
+      let $isActive = document.querySelector(".--active-menu");
+
+      //si es true lo volamos y se cierra el menu
+      if ($isActive) {
+        $isActive.classList.remove("--active-menu");
+      }
+      return false;
+    }
+  });
+</script>
+<script>
+  //==================
+  //ACTIVE SEARCH
+  //==================
+  let $input = document.querySelector(".com-search__input");
+  let $header = document.querySelector(".header");
+  let $headerMobile = document.querySelector(".com-nav-mobile");
+
+  //agregamos la clase al evento focus
+  $input.addEventListener("focus", function () {
+    $header.classList.add("--active-search");
+  });
+
+  //removemos la clase cuando nos salimos del input
+  $input.addEventListener("blur", function () {
+    $header.classList.remove("--active-search");
+  });
+</script>
+<script>
+  //Iniciamos la posicion del scroll
+  let scrollPos = 0;
+
+  let $share = document.querySelector(".com-share");
+
+  //funcion en la cual detectamos el scrollDown scrollUp y
+  // le asig su respectiva clase a un elemento que pasamos como parametro (elemento) y el valor actual de "Y" de window (windowY)
+  let scrollAnimation = (elemento, windowY) => {
+    //Validamos que exista el elemento y sino arafue.
+    if (!elemento) {
+      return false;
+    }
+
+    //si es menor el punto "Y" scroll al scrollPos definido entramos (scrollUp)
+    //caso contrario estariamos haciendo scrollDOwn, dentro definimos la clase para el estado
+    if (windowY < scrollPos) {
+      // Scroll UP
+      elemento.classList.add("--scrollUp");
+      elemento.classList.remove("--scrollDown");
+    } else {
+      // Scroll DOWN
+      elemento.classList.add("--scrollDown");
+      elemento.classList.remove("--scrollUp");
+    }
+  };
+
+  //agregamos una function scroll y dnetro de ella colocar todas las animaciones que funcionen con scroll
+  window.addEventListener("scroll", () => {
+    //asignamos el valor del punto "Y" en cada scroll
+    let windowY = window.scrollY;
+
+    //MENU DESKTOP
+    scrollAnimation($header, windowY);
+
+    // MENU MOBILE
+    // se le agrega el cond xq en safari con un determinado mouse el scroll hace un rebote en el explorador que
+    // genera que entienda que se esta haciendo scrolldown y entonces desaparece
+    if (windowY > 75) {
+      scrollAnimation($headerMobile, windowY);
+    }
+
+    //SHARE
+    if (document.documentElement.clientWidth < 1024) {
+      scrollAnimation($share, windowY);
+      //agregamos el condicional en el cual validamos que no este en top
+      //para que no se pise con el header
+      if ($share.classList.contains("--scrollUp") && windowY < 100) {
+        $share.style.display = "none";
+      } else {
+        $share.style.display = "block";
+      }
+    }
+
+    //le damos el valor actual del punto "Y" scroll a scrollPos para saber en la sig iteracion
+    //si es mayor o menor y de esta forma sabemos si esta subiendo o bajando.
+    //ESTE VALOR DEBERIA IR SIEMPRE A LO ULTIMO DEL SCROLL
+    scrollPos = windowY;
+  });
+
+  //transparencia para acu grilla, verificamos si existe el helper degrade y creamos el elemento dentro de ese helper y despues, segun el resize medimos el article
+  //y le asignamos a esa caja nueva la misma altura, asi se adapta siempre a las cajas
+
+  if (document.querySelector(".hlp-degrade") !== null) {
+    let transparency = document.createElement("div");
+    transparency.className = "transparency";
+    document.querySelector(".hlp-degrade").appendChild(transparency);
+  }
+  let alturaTransparency = () => {
+    let article = document.querySelector(".sidebar__main .mod-caja-nota");
+    let alturaArticle = article.offsetHeight;
+    document.querySelector(".transparency").style.height =
+      alturaArticle + "px";
+  };
+  alturaTransparency();
+
+  window.addEventListener("resize", () => {
+    alturaTransparency();
+  });
+</script>
+
+</html>
