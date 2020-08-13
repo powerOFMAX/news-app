@@ -186,32 +186,28 @@ main {
 /* FONTS --------------- */
 @font-face {
   font-family: "SuecaSlab";
-  src: url("../fonts/suecaslab-medium-webfont.eot");
-  src: url("../fonts/suecaslab-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/suecaslab-medium-webfont.woff") format("woff"), url("../fonts/suecaslab-medium-webfont.ttf") format("truetype"), url("../fonts/suecaslab-medium-webfont.svg?#webfont") format("svg");
+  src: url("./fonts/suecaslab-medium-webfont.woff") format("woff"), format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SuecaSlab";
-  src: url("../fonts/suecaslab-bold-webfont.eot");
-  src: url("../fonts/suecaslab-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/suecaslab-bold-webfont.woff") format("woff"), url("../fonts/suecaslab-bold-webfont.ttf") format("truetype"), url("../fonts/suecaslab-bold-webfont.svg?#webfont") format("svg");
+  src: url("./fonts/suecaslab-bold-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "LNicons";
-  src: url("../fonts/ln-icons.eot");
-  src: url("../fonts/ln-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/ln-icons.woff") format("woff"), url("../fonts/ln-icons.ttf") format("truetype"), url("../fonts/ln-icons.svg?#webfont") format("svg");
+  src: url("./fonts/ln-icons.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "LNlogos";
-  src: url("../fonts/ln-logos.eot");
-  src: url("../fonts/ln-logos.eot?#iefix") format("embedded-opentype"), url("../fonts/ln-logos.woff") format("woff"), url("../fonts/ln-logos.ttf") format("truetype"), url("../fonts/ln-logos.svg?#webfont") format("svg");
+  src: url("./fonts/ln-logos.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -2533,394 +2529,6 @@ strong {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.8) 60%);
 }
 
-/*
-@media ($media-xs) {
-    .hlp-flex-col {
-        display: flex;
-        flex-direction: column;
-    }
-    .hlp-flex-col-xs {
-        display: flex;
-        flex-direction: column;
-    }
-    .hlp-flex-row {
-        display: flex;
-        flex-direction: row;
-    }
-    .hlp-flex-row-xs {
-        display: flex;
-        flex-direction: row;
-    }
-    .hlp-justify-start {
-        justify-content: flex-start;
-    }
-    .hlp-justify-start-xs {
-        justify-content: flex-start;
-    }
-    .hlp-justify-end {
-        justify-content: flex-end;
-    }
-    .hlp-justify-end-xs {
-        justify-content: flex-end;
-    }
-    .hlp-justify-center {
-        justify-content: center;
-    }
-    .hlp-justify-center-xs {
-        justify-content: center;
-    }
-    .hlp-justify-between {
-        justify-content: space-between;
-    }
-    .hlp-justify-between-xs {
-        justify-content: space-between;
-    }
-    .hlp-justify-around {
-        justify-content: space-around;
-    }
-    .hlp-justify-around-xs {
-        justify-content: space-around;
-    }
-    .hlp-justify-evenly {
-        justify-content: space-evenly;
-    }
-    .hlp-justify-evenly-xs {
-        justify-content: space-evenly;
-    }
-    .hlp-align-start {
-        align-items: flex-start;
-    }
-    .hlp-align-start-xs {
-        align-items: flex-start;
-    }
-    .hlp-align-end {
-        align-items: flex-end;
-    }
-    .hlp-align-end-xs {
-        align-items: flex-end;
-    }
-    .hlp-align-center {
-        align-items: center;
-    }
-    .hlp-align-center-xs {
-        align-items: center;
-    }
-    .hlp-align-stretch {
-        align-items: stretch;
-    }
-    .hlp-align-stretch-xs {
-        align-items: stretch;
-    }
-}
-@media ($media-s) {
-    .hlp-flex-col-xs,
-    .hlp-flex-row-xs {
-        display: inherit;
-        flex-direction: inherit;
-    }
-    .hlp-flex-col-s {
-        display: flex;
-        flex-direction: column;
-    }
-    .hlp-flex-row-s {
-        display: flex;
-        flex-direction: column;
-    }
-    .hlp-justify-start-xs,
-    .hlp-justify-end-xs,
-    .hlp-justify-center-xs,
-    .hlp-justify-between-xs,
-    .hlp-justify-around-xs,
-    .hlp-justify-evenly-xs {
-        justify-content: inherit;
-    }
-    .hlp-justify-start-s {
-        justify-content: flex-start;
-    }
-    .hlp-justify-end-s {
-        justify-content: flex-end;
-    }
-    .hlp-justify-center-s {
-        justify-content: center;
-    }
-    .hlp-justify-between-s {
-        justify-content: space-between;
-    }
-    .hlp-justify-around-s {
-        justify-content: space-around;
-    }
-    .hlp-justify-evenly-s {
-        justify-content: space-evenly;
-    }
-    .hlp-align-start-xs,
-    .hlp-align-end-xs,
-    .hlp-align-center-xs,
-    .hlp-align-stretch-xs {
-        align-items: inherit;
-    }
-    .hlp-align-start-s {
-        align-items: flex-start;
-    }
-    .hlp-align-end-s {
-        align-items: flex-end;
-    }
-    .hlp-align-center-s {
-        align-items: center;
-    }
-    .hlp-align-stretch-s {
-        align-items: stretch;
-    }
-}
-@media ($media-m) {
-    .hlp-flex-col-xs,
-    .hlp-flex-row-xs,
-    .hlp-flex-col-s,
-    .hlp-flex-row-s {
-        display: inherit;
-        flex-direction: inherit;
-    }
-    .hlp-flex-col-m {
-        display: flex;
-        flex-direction: column;
-    }
-    .hlp-flex-row-m {
-        display: flex;
-        flex-direction: row;
-    }
-    .hlp-justify-start-xs,
-    .hlp-justify-end-xs,
-    .hlp-justify-center-xs,
-    .hlp-justify-between-xs,
-    .hlp-justify-around-xs,
-    .hlp-justify-evenly-xs,
-    .hlp-justify-start-s,
-    .hlp-justify-end-s,
-    .hlp-justify-center-s,
-    .hlp-justify-between-s,
-    .hlp-justify-around-s,
-    .hlp-justify-evenly-s {
-        justify-content: inherit;
-    }
-    .hlp-justify-start-m {
-        justify-content: flex-start;
-    }
-    .hlp-justify-end-m {
-        justify-content: flex-end;
-    }
-    .hlp-justify-center-m {
-        justify-content: center;
-    }
-    .hlp-justify-between-m {
-        justify-content: space-between;
-    }
-    .hlp-justify-around-m {
-        justify-content: space-around;
-    }
-    .hlp-justify-evenly-m {
-        justify-content: space-evenly;
-    }
-    .hlp-align-start-xs,
-    .hlp-align-end-xs,
-    .hlp-align-center-xs,
-    .hlp-align-stretch-xs,
-    .hlp-align-start-s,
-    .hlp-align-end-s,
-    .hlp-align-center-s,
-    .hlp-align-stretch-s {
-        align-items: inherit;
-    }
-    .hlp-align-start-m {
-        align-items: flex-start;
-    }
-    .hlp-align-end-m {
-        align-items: flex-end;
-    }
-    .hlp-align-center-m {
-        align-items: center;
-    }
-    .hlp-align-stretch-m {
-        align-items: stretch;
-    }
-}
-@media ($media-l) {
-    .hlp-flex-col-xs,
-    .hlp-flex-row-xs,
-    .hlp-flex-col-s,
-    .hlp-flex-row-s,
-    .hlp-flex-col-m,
-    .hlp-flex-row-m {
-        display: inherit;
-        flex-direction: inherit;
-    }
-    .hlp-flex-col-l {
-        display: flex;
-        flex-direction: column;
-    }
-    .hlp-flex-row-l {
-        display: flex;
-        flex-direction: row;
-    }
-    .hlp-justify-start-xs,
-    .hlp-justify-end-xs,
-    .hlp-justify-center-xs,
-    .hlp-justify-between-xs,
-    .hlp-justify-around-xs,
-    .hlp-justify-evenly-xs,
-    .hlp-justify-start-s,
-    .hlp-justify-end-s,
-    .hlp-justify-center-s,
-    .hlp-justify-between-s,
-    .hlp-justify-around-s,
-    .hlp-justify-evenly-s,
-    .hlp-justify-start-m,
-    .hlp-justify-end-m,
-    .hlp-justify-center-m,
-    .hlp-justify-between-m,
-    .hlp-justify-around-m,
-    .hlp-justify-evenly-m {
-        justify-content: inherit;
-    }
-    .hlp-justify-start-l {
-        justify-content: flex-start;
-    }
-    .hlp-justify-end-l {
-        justify-content: flex-end;
-    }
-    .hlp-justify-center-l {
-        justify-content: center;
-    }
-    .hlp-justify-between-l {
-        justify-content: space-between;
-    }
-    .hlp-justify-around-l {
-        justify-content: space-around;
-    }
-    .hlp-justify-evenly-l {
-        justify-content: space-evenly;
-    }
-    .hlp-align-start-xs,
-    .hlp-align-end-xs,
-    .hlp-align-center-xs,
-    .hlp-align-stretch-xs,
-    .hlp-align-start-s,
-    .hlp-align-end-s,
-    .hlp-align-center-s,
-    .hlp-align-stretch-s,
-    .hlp-align-start-m,
-    .hlp-align-end-m,
-    .hlp-align-center-m,
-    .hlp-align-stretch-m {
-        align-items: inherit;
-    }
-    .hlp-align-start-l {
-        align-items: flex-start;
-    }
-    .hlp-align-end-l {
-        align-items: flex-end;
-    }
-    .hlp-align-center-l {
-        align-items: center;
-    }
-    .hlp-align-stretch-l {
-        align-items: stretch;
-    }
-}
-@media ($media-lg) {
-    .hlp-flex-col-xs,
-    .hlp-flex-row-xs,
-    .hlp-flex-col-s,
-    .hlp-flex-row-s,
-    .hlp-flex-col-m,
-    .hlp-flex-row-m,
-    .hlp-flex-col-l,
-    .hlp-flex-row-l {
-        display: inherit;
-        flex-direction: inherit;
-    }
-    .hlp-flex-col-xl {
-        display: flex;
-        flex-direction: column;
-    }
-    .hlp-flex-row-xl {
-        display: flex;
-        flex-direction: row;
-    }
-    .hlp-justify-start-xs,
-    .hlp-justify-end-xs,
-    .hlp-justify-center-xs,
-    .hlp-justify-between-xs,
-    .hlp-justify-around-xs,
-    .hlp-justify-evenly-xs,
-    .hlp-justify-start-s,
-    .hlp-justify-end-s,
-    .hlp-justify-center-s,
-    .hlp-justify-between-s,
-    .hlp-justify-around-s,
-    .hlp-justify-evenly-s,
-    .hlp-justify-start-m,
-    .hlp-justify-end-m,
-    .hlp-justify-center-m,
-    .hlp-justify-between-m,
-    .hlp-justify-around-m,
-    .hlp-justify-evenly-m,
-    .hlp-justify-start-l,
-    .hlp-justify-end-l,
-    .hlp-justify-center-l,
-    .hlp-justify-between-l,
-    .hlp-justify-around-l,
-    .hlp-justify-evenly-l {
-        justify-content: inherit;
-    }
-    .hlp-justify-start-lg {
-        justify-content: flex-start;
-    }
-    .hlp-justify-end-lg {
-        justify-content: flex-end;
-    }
-    .hlp-justify-end-lg {
-        justify-content: center;
-    }
-    .hlp-justify-between-lg {
-        justify-content: space-between;
-    }
-    .hlp-justify-around-lg {
-        justify-content: space-around;
-    }
-    .hlp-justify-evenly-lg {
-        justify-content: space-evenly;
-    }
-    .hlp-align-start-xs,
-    .hlp-align-end-xs,
-    .hlp-align-center-xs,
-    .hlp-align-stretch-xs,
-    .hlp-align-start-s,
-    .hlp-align-end-s,
-    .hlp-align-center-s,
-    .hlp-align-stretch-s,
-    .hlp-align-start-m,
-    .hlp-align-end-m,
-    .hlp-align-center-m,
-    .hlp-align-stretch-m,
-    .hlp-align-start-l,
-    .hlp-align-end-l,
-    .hlp-align-center-l,
-    .hlp-align-stretch-l {
-        align-items: inherit;
-    }
-    .hlp-align-start-lg {
-        align-items: flex-start;
-    }
-    .hlp-align-end-lg {
-        align-items: flex-end;
-    }
-    .hlp-align-center-lg {
-        align-items: center;
-    }
-    .hlp-align-stretch-lg {
-        align-items: stretch;
-    }
-}
-*/
 .cont-figure {
   background-color: #f2f2f2;
 }
@@ -6162,7 +5770,6 @@ input[type=text]:focus::placeholder {
 }
 
 .mod-newsletter .col-12:nth-child(2) {
-  background-image: url("/arc-css/img/newsletter-lineas-trama-der.svg");
   background-position: right top;
   background-size: 40%;
   background-repeat: no-repeat;
@@ -6216,7 +5823,7 @@ input[type=text]:focus::placeholder {
 
 .mod-newsletter.error .com-input {
   border: 1px solid #9d2827;
-  background-image: url("/arc-css/img/x.svg");
+  /* background-image: url("/arc-css/img/x.svg"); */
   background-repeat: no-repeat;
   background-position: right 10px center;
 }
@@ -6229,7 +5836,7 @@ input[type=text]:focus::placeholder {
 }
 
 .mod-newsletter p.check {
-  background-image: url("/arc-css/img/check.svg");
+  /* background-image: url("/arc-css/img/check.svg"); */
   background-repeat: no-repeat;
   text-indent: 30px;
 }
@@ -6283,14 +5890,6 @@ input[type=text]:focus::placeholder {
   .mod-newsletter .col-tablet-2 {
     background-repeat: no-repeat;
     background-size: 100%;
-  }
-  .mod-newsletter .col-tablet-2:first-child {
-    background-image: url("/arc-css/img/newsletter-lineas-trama-izq.svg");
-    background-position: left bottom;
-  }
-  .mod-newsletter .col-tablet-2:last-child {
-    background-image: url("/arc-css/img/newsletter-lineas-trama-der.svg");
-    background-position: right top;
   }
 }
 

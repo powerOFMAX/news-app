@@ -1,7 +1,8 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { hydrate } from 'react-dom';
 import App from './components';
+import './site.css';
 
-render(
-  <App />, document.getElementById('root')
-)
+hydrate(
+  <App />, document.getElementById('root'),
+);

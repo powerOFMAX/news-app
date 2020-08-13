@@ -44,6 +44,7 @@ const Body = () => {
               return (
                 <Article
                   key={id || basic}
+                  alt={basic}
                   source={url}
                   title={basic}
                   date={display_date}
