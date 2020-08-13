@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
 const Banner = () => (
   <>
     {/* <!-- BANNER TOP --> */}
-    <div class="banner w-100 --bg-banner">
-      <div class="banner --top --desktop"></div>
-      <div class="banner --top --tablet"></div>
-      <div class="banner --top --mobile"></div>
+    <div className="banner w-100 --bg-banner">
+      <div className="banner --top --desktop" />
+      <div className="banner --top --tablet" />
+      <div className="banner --top --mobile" />
     </div>
     {/* <!-- BANNER STICKY --> */}
-    <div class="banner w-100 --bg-banner">
-      <div class="banner --sticky --mobile"></div>
+    <div className="banner w-100 --bg-banner">
+      <div className="banner --sticky --mobile" />
     </div>
   </>
 );

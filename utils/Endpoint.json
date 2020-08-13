@@ -33,10 +33,7 @@
           { "slug": "leche-de-coco-tid48865", "text": "Leche de coco" },
           { "slug": "canela-tid47164", "text": "Canela" },
           { "slug": "limon-tid47252", "text": "Limón" },
-          {
-            "slug": "esencia-de-vainilla-tid47214",
-            "text": "Esencia de vainilla"
-          },
+          { "slug": "esencia-de-vainilla-tid47214","text": "Esencia de vainilla"},
           { "slug": "arroz-tid47136", "text": "Arroz" },
           { "slug": "clavo-de-olor-tid47192", "text": "Clavo de olor" }
         ]
